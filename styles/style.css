@@ -1,0 +1,53 @@
+:root {
+  font-family: "Rubik", sans-serif;
+  color-scheme: light;
+  color: #000;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#content {
+  margin: 80px auto;
+  max-width: 1396px;
+}
+
+ul, ol, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.header .tabs {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.header .tabs .tab.active {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #000;
+  border: none;
+  cursor: default;
+}
+.header .tabs .tab {
+  font-size: 24px;
+  line-height: 34px;
+  color: #535658;
+  border-bottom: 1px dotted #535658;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.header .tabs .tab:hover {
+  color: #333;
+}/*# sourceMappingURL=style.css.map */
