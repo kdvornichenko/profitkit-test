@@ -5,7 +5,6 @@ export default {
 	plugins: [
 		handlebars({
 			partialDirectory: resolve(__dirname, 'components'),
-			reloadOnPartialChange: true,
 		}),
 	],
 }

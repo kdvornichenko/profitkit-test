@@ -156,6 +156,10 @@ body {
 .slider {
   margin-top: 40px;
 }
+.slider .cards {
+  display: flex;
+  justify-content: space-between;
+}
 
 .card {
   position: relative;
@@ -235,6 +239,7 @@ body {
   text-align: center;
 }
 .card .info .title {
+  height: 40px;
   font-size: 14px;
   line-height: 20px;
 }
@@ -275,6 +280,7 @@ body {
 }
 .card .counter__count {
   width: 10px;
+  text-align: center;
   color: #000;
 }
 .card .counter__decr, .card .counter__incr {
@@ -331,4 +337,8 @@ body {
 }
 .card .cartbtn:hover {
   background-color: #fdc704;
+}
+.card:first-child .info .title {
+  width: 260px;
+  margin: auto;
 }/*# sourceMappingURL=style.css.map */
