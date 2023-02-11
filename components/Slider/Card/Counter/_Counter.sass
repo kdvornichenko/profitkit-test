@@ -1,0 +1,42 @@
+@mixin counterControl
+	display: block
+	width: 12px
+	height: 2px
+	background-color: $mainGray
+	border-radius: 1px
+	transition: $mainTransitionBG
+.counter
+	padding: 10px 5px
+	max-width: 100px
+	border: 1px solid $cardBorder
+	border-radius: $mainBorderRadius
+	display: flex
+	align-items: center
+	justify-content: center
+	gap: 11px
+	&__count
+		width: 10px
+		color: $mainBlack
+	&__decr, &__incr
+		width: 30px
+		height: 30px
+		display: flex
+		justify-content: center
+		align-items: center
+		border-radius: 3px
+		cursor: pointer
+		transition: $mainTransitionBG
+		& > span
+			@include counterControl
+		&:hover
+			background-color: #f0eded
+		&:hover span, &:hover span::before
+			background-color: $mainGrayHover
+	&__incr
+		& > span
+			position: relative
+			&::before
+				@include counterControl
+				content: ''
+				position: absolute
+				transform: rotate(90deg)

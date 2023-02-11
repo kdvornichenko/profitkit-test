@@ -1,0 +1,19 @@
+.tools
+	position: absolute
+	right: 20px
+	top: 20px
+	display: flex
+	flex-direction: column
+	gap: 5px
+	z-index: 1
+	.item
+		box-sizing: content-box
+		width: 20px
+		height: 20px
+		padding: 7px
+		background-color: $mainWhite
+		border-radius: 100%
+		cursor: pointer
+		transition: $mainTransitionBG
+		&:hover
+			background-color: $lightHover

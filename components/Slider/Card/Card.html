@@ -1,6 +1,9 @@
 <div class="card">
-	<div class="tools">
-		<span class="tools__favorite item">{{>Slider/Card/FavoriteIcon}}</span>
-		<span class="tools__compare item">{{>Slider/Card/CompareIcon}}</span>
+	{{>Slider/Card/Tools}} {{>Slider/Card/Images}}
+	<div class="wrap">
+		{{>Slider/Card/Info}}
+		<div class="purchase">
+			{{>Slider/Card/Counter}} {{>Slider/Card/CartBtn/CartBtn}}
+		</div>
 	</div>
 </div>

@@ -1,0 +1,32 @@
+.images
+	position: relative
+	&__slider
+		display: flex
+		&-control
+			margin: 0 auto
+			width: min-content
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			& > nav
+				& > ul
+					display: flex
+					gap: 4px
+					& > li:not(:has(span.active))
+						opacity: 0.2
+						&:hover
+							opacity: 0.4
+					& > li
+						padding: 15px 0
+						cursor: pointer
+						transition: opacity $mainTransition
+						& > span
+							display: block
+							width: 20px
+							height: 2px
+							background-color: $mainBlack
+							border-radius: 1px
+							transition: all $mainTransition
+						& > span.active
+							background-color: $mainYellow
