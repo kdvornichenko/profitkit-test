@@ -13,15 +13,25 @@
 								transition: all 0.2s ease-in-out;
 			       }
 
-						 .tools__favorite.item:hover .stroke {
-								fill: #ff5252;
-								stroke: #ff5252;
-						 }
+
 
 						 .tools__favorite.active .stroke {
 								fill: #ff1717;
 								stroke: #ff1717;
 						 }
+
+						 @media (hover: hover) and (pointer: fine) {
+								.tools__favorite.item:hover .stroke {
+									fill: #ff5252;
+									stroke: #ff5252;
+								}
+							}
+
+							@media (hover: none) {
+								.tools__favorite.item:focus .stroke {
+									pointer-events: none;
+								}
+							}
 			    ]]>
 		</style>
 	</defs>
