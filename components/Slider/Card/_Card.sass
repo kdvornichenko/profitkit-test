@@ -4,10 +4,13 @@
 	overflow: hidden
 	border: 1px solid $cardBorder
 	border-radius: $mainBorderRadius
+	@import './Sticker/_Sticker.sass'
 	@import './Tools/_Tools.sass'
 	@import './Images/_Images.sass'
 	.wrap
 		padding: 10px 25px 25px
+		@media screen and ( max-width: 620px )
+			padding: 10px 20px 20px
 	@import './Info/_Info.sass'
 	.purchase
 		margin-top: 10px
@@ -15,10 +18,16 @@
 		align-items: center
 		justify-content: space-between
 		gap: 10px
+		@media screen and ( max-width: 620px )
+			justify-content: center
 	@import './Counter/_Counter.sass'
 	@import './CartBtn/_CartBtn.sass'
+.wrap
+	width: 332px
 	&:first-child
 		.info
 			.title
-				width: 260px
+				max-width: 260px
 				margin: auto
+	@media screen and ( max-width: 476px )
+		width: 260px

@@ -116,6 +116,10 @@ legend {
   -webkit-text-size-adjust: 100%;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   min-width: 320px;
@@ -123,14 +127,25 @@ body {
 }
 
 #content {
+  padding: 0 20px;
+  box-sizing: content-box;
   margin: 80px auto;
   max-width: 1396px;
 }
 
 .header .tabs {
+  height: 40px;
   display: flex;
   align-items: center;
   gap: 25px;
+}
+@media screen and (max-width: 620px) {
+  .header .tabs {
+    height: 84px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
 }
 .header .tabs .tab.active {
   font-weight: 700;
@@ -141,6 +156,18 @@ body {
   border: none;
   cursor: default;
 }
+@media screen and (max-width: 1181px) {
+  .header .tabs .tab.active {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .header .tabs .tab.active {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
 .header .tabs .tab {
   font-size: 24px;
   line-height: 34px;
@@ -149,16 +176,52 @@ body {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
+@media screen and (max-width: 1181px) {
+  .header .tabs .tab {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .header .tabs .tab {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
 .header .tabs .tab:hover {
   color: #333;
 }
 
 .slider {
   margin-top: 40px;
+  overflow-x: scroll;
+}
+.slider::-webkit-scrollbar {
+  width: 10px;
+}
+.slider::-webkit-scrollbar-track {
+  background: transparent;
+}
+.slider::-webkit-scrollbar-thumb {
+  background-color: #8D9295;
+  border: 5px solid transparent;
+  border-radius: 9px;
+  background-clip: content-box;
+}
+@media screen and (max-width: 1181px) {
+  .slider {
+    margin-top: 25px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .slider::-webkit-scrollbar {
+    display: none;
+  }
 }
 .slider .cards {
   display: flex;
   justify-content: space-between;
+  gap: 15px;
 }
 
 .card {
@@ -167,6 +230,18 @@ body {
   overflow: hidden;
   border: 1px solid #ECF0F4;
   border-radius: 5px;
+}
+.card .sticker {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.card .sticker .item {
+  display: none;
 }
 .card .tools {
   position: absolute;
@@ -195,6 +270,7 @@ body {
 }
 .card .images__slider {
   display: flex;
+  transition: transform 0.2s ease-in-out;
 }
 .card .images__slider-control {
   margin: 0 auto;
@@ -235,6 +311,11 @@ body {
 .card .wrap {
   padding: 10px 25px 25px;
 }
+@media screen and (max-width: 620px) {
+  .card .wrap {
+    padding: 10px 20px 20px;
+  }
+}
 .card .info {
   text-align: center;
 }
@@ -242,6 +323,12 @@ body {
   height: 40px;
   font-size: 14px;
   line-height: 20px;
+}
+@media screen and (max-width: 620px) {
+  .card .info .title {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 .card .info .price {
   margin-top: 5px;
@@ -268,6 +355,11 @@ body {
   justify-content: space-between;
   gap: 10px;
 }
+@media screen and (max-width: 620px) {
+  .card .purchase {
+    justify-content: center;
+  }
+}
 .card .counter {
   padding: 10px 5px;
   max-width: 100px;
@@ -277,6 +369,11 @@ body {
   align-items: center;
   justify-content: center;
   gap: 11px;
+}
+@media screen and (max-width: 620px) {
+  .card .counter {
+    display: none;
+  }
 }
 .card .counter__count {
   width: 10px;
@@ -330,6 +427,11 @@ body {
   border-radius: 5px;
   transition: background-color 0.2s ease-in-out;
 }
+@media screen and (max-width: 620px) {
+  .card .cartbtn {
+    padding: 15px 56px;
+  }
+}
 .card .cartbtn > span {
   font-weight: 500;
   font-size: 14px;
@@ -338,7 +440,16 @@ body {
 .card .cartbtn:hover {
   background-color: #fdc704;
 }
-.card:first-child .info .title {
-  width: 260px;
+
+.wrap {
+  width: 332px;
+}
+.wrap:first-child .info .title {
+  max-width: 260px;
   margin: auto;
+}
+@media screen and (max-width: 476px) {
+  .wrap {
+    width: 260px;
+  }
 }/*# sourceMappingURL=style.css.map */

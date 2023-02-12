@@ -1,8 +1,15 @@
 <div class="card">
-	{{>Slider/Card/Tools/Tools}} {{#>Slider/Card/Images/Images}} {{>
-	@partial-block }} {{/Slider/Card/Images/Images}}
+	<div class="sticker-wrap">
+		{{#>Slider/Card/Sticker/Sticker}}{{sticker}}{{/Slider/Card/Sticker/Sticker}}
+	</div>
+	{{>Slider/Card/Tools/Tools}}
+	<div class="images-wrap">
+		{{#>Slider/Card/Images/Images}} {{> @partial-block }}
+		{{/Slider/Card/Images/Images}}
+	</div>
 	<div class="wrap">
-		{{#>Slider/Card/Info/Info}} {{title}} {{mainPrice}} {{oldPrice}} {{/Slider/Card/Info/Info}}
+		{{#>Slider/Card/Info/Info}} {{title}} {{mainPrice}} {{oldPrice}}
+		{{/Slider/Card/Info/Info}}
 		<div class="purchase">
 			{{>Slider/Card/Counter/Counter}} {{>Slider/Card/CartBtn/CartBtn}}
 		</div>
