@@ -132,6 +132,11 @@ body {
   margin: 80px auto;
   max-width: 1396px;
 }
+@media screen and (max-width: 620px) {
+  #content {
+    margin: 40px auto;
+  }
+}
 
 .header .tabs {
   height: 40px;
